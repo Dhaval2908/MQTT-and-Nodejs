@@ -9,12 +9,12 @@
     <table border="1">
         <tr>
             <th>S.N</th>
-            <th>Full Name</th>
-            <th>Email Address</th>
-            <th>City</th>
-            <th>Country</th>
-            <th>Edit</th>
-            <th>Delete</th>
+            <th>Temp</th>
+            <th>Humidity</th>
+            <th>EC</th>
+            <th>PH</th>
+            <th>Time</th>
+            <th>date</th>
         </tr>
         
         <%
@@ -28,8 +28,10 @@
             <td><%=data.Humidity %></td>
             <td><%=data.EC %></td>
             <td><%=data.PH %></td>
-            <td><a href="/users/edit/<%=data.id%>">Edit</a></td>
-            <td><a href="/users/delete/<%=data.id%>">Delete</a></td>
+            <td><%=data.Time %></td>
+            <td><%=data.Date %></td>
+            <!-- <td><a href="/users/edit/<%=data.id%>">Edit</a></td>
+            <td><a href="/users/delete/<%=data.id%>">Delete</a></td> -->
         </tr>
         <%  i++; }) %>
         <% } else{ %>
