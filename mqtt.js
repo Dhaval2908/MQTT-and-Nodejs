@@ -31,6 +31,7 @@ var time=0
 var date=0
 cron.schedule('0 */5 * * * *', () => {
    console.log("Calling")
+  //  '0 */5 * * * *
     getdata();
     
 });
@@ -80,9 +81,12 @@ function savedata(Temp,humidity)
   {
     humidity = '5.5'
   }
+  let day = ("0" + date_ob.getDate()).slice(-2);
+  let month = ("0" + (date_ob.getMonth() + 1)).slice(-2);
   time =date_ob.getHours()+':'+date_ob.getMinutes()+':'+date_ob.getSeconds();
-  date =date_ob.getFullYear()+'/'+(date_ob.getMonth()+1)+'/'+date_ob.getDate();
+  date =date_ob.getFullYear()+'/'+month+'/'+day;
   console.log(time)
+  console.log(date)
   var t2 = "53"
   var t3 = "54"
   var sql = "INSERT INTO data (Temp,Humidity,EC,PH,Time,Date) VALUES (?,?,?,?,?,?);"

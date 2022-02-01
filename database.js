@@ -3,7 +3,7 @@ var con = mysql.createConnection({
   host: 'localhost', // Replace with your host name
   user: 'root',      // Replace with your database username
   password: '',      // Replace with your database password
-  database: 'hydrophonics' // // Replace with your database Name
+  database: 'test' // // Replace with your database Name
 }); 
 con.connect(function(err) {
   if (err) throw err;

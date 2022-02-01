@@ -4,9 +4,10 @@ var db=require('../database');
 // another routes also appear here
 // this script to fetch data from MySQL databse table
 router.get('/user-list', function(req, res, next) {
-    var sql='SELECT * FROM data ORDER  BY Date   DESC LIMIT 1 ';
+    var sql='SELECT * FROM `data` ORDER BY `Date`AND Time ASC Limit 1';
     db.query(sql, function (err, data, fields) {
     if (err) throw err;
+    console.log("ttets",data)
     res.render('user-list', { title: 'User List', userData: data});
   });
 });
